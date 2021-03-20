@@ -4,15 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/environment.cpp" "/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/build/CMakeFiles/environment.dir/src/environment.cpp.o"
-  "/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/processPointClouds.cpp" "/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/build/CMakeFiles/environment.dir/src/processPointClouds.cpp.o"
-  "/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/render/render.cpp" "/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/build/CMakeFiles/environment.dir/src/render/render.cpp.o"
+  "/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/environment.cpp" "/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/build/CMakeFiles/environment.dir/src/environment.cpp.o"
+  "/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/processPointClouds.cpp" "/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/build/CMakeFiles/environment.dir/src/processPointClouds.cpp.o"
+  "/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/render/render.cpp" "/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/build/CMakeFiles/environment.dir/src/render/render.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "DISABLE_LIBUSB_1_0"
+  "DISABLE_OPENNI"
+  "DISABLE_OPENNI2"
   "DISABLE_PCAP"
   "DISABLE_PNG"
   "qh_QHpointer"
@@ -26,8 +28,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/freetype2"
   "/usr/include/pcl-1.10"
   "/usr/include/eigen3"
-  "/usr/include/ni"
-  "/usr/include/openni2"
   )
 
 # Targets to which this target links.

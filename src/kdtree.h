@@ -1,7 +1,5 @@
-/* \author Aaron Brown */
-// Quiz on implementing kd tree
-
-#include "../../render/render.h"
+#include <vector>
+#include <cmath>
 
 
 // Structure to represent node of kd tree
@@ -20,7 +18,8 @@ struct Node
 struct KdTree
 {
 	Node* root;
-
+    int dim;
+  
 	KdTree()
 	: root(NULL)
 	{}
@@ -30,7 +29,7 @@ struct KdTree
         *node = new Node(point, id);
       else
       {  
-        uint cd = depth % 2;
+        uint cd = depth % dim;
       	if (point[cd] < ((*node)->point[cd]))
         	insertHelper(&((*node)->left), depth+1, point, id);
       	else
@@ -47,20 +46,30 @@ struct KdTree
 
     void searchHelper(std::vector<float> target, Node* node, int depth, float distanceTol, std::vector<int>& ids)
     {
-      if(node!=NULL)
-      {
-        if( (node->point[0]>=(target[0]-distanceTol) && node->point[0]<=(target[0]+distanceTol)) && (node->point[1]>=(target[1]-distanceTol) && node->point[1]<=(target[1]+distanceTol)))
-        {
-          float distance = sqrt((node->point[0] - target[0])*(node->point[0] - target[0]) + (node->point[1] - target[1])*(node->point[1] - target[1]));
+        if(node==NULL)
+            return;
+      
+        bool withindistance = true;
+		for(int d = 0; d < dim; d++){
+			if(node->point[d] < (target[d] - distanceTol) || node->point[d] > (target[d] + distanceTol)){
+				withindistance = false;
+				break;
+			}
+		}
+        if(withindistance){
+          float distance = 0;
+          for (int d = 0; d < dim; d++){
+				distance += (node->point[d] - target[d]) * (node->point[d] - target[d]);
+		  }
+          distance = sqrt(distance);
           if (distance <= distanceTol)
             ids.push_back(node->id);
         }
         
-        if((target[depth%2] - distanceTol)<node->point[depth%2])
+        if((target[depth%dim] - distanceTol)<node->point[depth%dim])
           searchHelper(target, node->left, depth+1, distanceTol, ids);
-        if((target[depth%2] + distanceTol)>node->point[depth%2])
+        if((target[depth%dim] + distanceTol)>node->point[depth%dim])
           searchHelper(target, node->right, depth+1, distanceTol, ids);
-      }
     }
 	// return a list of point ids in the tree that are within distance of target
 	std::vector<int> search(std::vector<float> target, float distanceTol)

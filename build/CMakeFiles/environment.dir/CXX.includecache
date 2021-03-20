@@ -6,23 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/environment.cpp
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/environment.cpp
 sensors/lidar.h
-/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/sensors/lidar.h
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/sensors/lidar.h
 render/render.h
-/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/render/render.h
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/render/render.h
 processPointClouds.h
-/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/processPointClouds.h
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/processPointClouds.h
 processPointClouds.cpp
-/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/processPointClouds.cpp
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/processPointClouds.cpp
 unistd.h
 -
 
-/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/processPointClouds.cpp
-processPointClouds.h
-/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/processPointClouds.h
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/kdtree.h
+vector
+-
+cmath
+-
 
-/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/processPointClouds.h
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/processPointClouds.cpp
+processPointClouds.h
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/processPointClouds.h
+
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/processPointClouds.h
 pcl/io/pcd_io.h
 -
 pcl/common/common.h
@@ -52,17 +58,19 @@ ctime
 chrono
 -
 render/box.h
-/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/render/box.h
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/render/box.h
+kdtree.h
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/kdtree.h
 
-/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/render/box.h
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/render/box.h
 Eigen/Geometry
 -
 
-/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/render/render.h
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/render/render.h
 pcl/visualization/pcl_visualizer.h
 -
 box.h
-/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/render/box.h
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/render/box.h
 iostream
 -
 vector
@@ -70,9 +78,9 @@ vector
 string
 -
 
-/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/sensors/lidar.h
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/sensors/lidar.h
 ../render/render.h
-/home/claudiu/catkin_ws/src/Application-Development/SFND_Lidar_Obstacle_Detection/src/render/render.h
+/home/claudiu/Personal-Projects/Lidar-Obstacle-Detection/src/render/render.h
 ctime
 -
 chrono
